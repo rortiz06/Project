@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LapTop</title>
+    <link rel="stylesheet" href="layout.css" type="text/css">
+
+
+</head>
+
+
+<body>
+
+
+    <table id="logo">
+        <tr>
+            <td> <img src="logo.png" alt="Stc logo" class="logo"></td>
+            <td>
+                <h1 id="top">Dude On Computer</h1>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+
+    <div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home </a> </li>
+                <li><a href="About us.html">About Us </a> </li>
+                <li><a href="Phone.html">Phone Repair </a> </li>
+                <li><a href="Laptop.html">Laptop Repair </a> </li>
+                <li><a href="Tablet.html">Tablet</a> </li>
+                <li><a href="MacSales.html">Mac Sales</a> </li>
+                <li><a href="Printer.html">Printer </a> </li>
+                <li><a href="Network.html">Network </a> </li>
+                <li><a href="Tech Help.html">Tech Help</a> </li>
+                <li><a href="FAQ.html">FAQ</a> </li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="title">
+        <div>
+            <h1>Laptop</h1>
+        </div>
+    </div>
+
+    <table>
+
+        <tr>
+            <td style="color: white;">
+                <h3>Welcome to our LAPTOP repair station. Here you can pick what kind of computer (Windows or Apple) and
+                    what needs to be
+                    repaired. What is listed is what we are available to fix.</h3>
+            </td>
+        </tr>
+    </table>
+
+    </table>
+    <table>
+        <form name="theform">
+            <tr>
+                <td><strong>Windows Computer<img src="windows.png" alt=""></strong></td>
+                <td>Enter what you need repaired:</td>
+                <td><strong>Apple Computer<img src="apple.png" alt="pic of apple logo"></strong></td>
+                <td>Enter what you need repaired:</td>
+
+
+            </tr>
+            <tr>
+
+                <td>Screen replacement $29.99</td>
+                <td id="winscreen"><input name="winscreen" size="10"></td>
+                <td>Screen price $159.99</td>
+                <td id="iscreen"><input name="iscreen" size="10"></td>
+            </tr>
+            <tr>
+
+                <td>Battery replacement $49.99:</td>
+                <td id="winbattery"><input name="winbattery" size="10"></td>
+                <td>Battery price $149.99:</td>
+                <td id="ibattery"><input name="ibattery" size="10"></td>
+            </tr>
+            <tr>
+
+                <td>Charging port replacement $39.99:</td>
+                <td id="winchargingport"><input name="winchargingport" size="10"></td>
+                <td>Charging port price $139.99:</td>
+                <td id="ichargingport"><input name="ichargingport" size="10"></td>
+            </tr>
+            <tr>
+
+                <td>MotherBoard replacement $ 129.99:</td>
+                <td id="winmotherboard"><input name="winmotherboard" size="10"></td>
+                <td>MotherBoard price $ 189.99:</td>
+                <td id="imotherboard"><input name="imotherboard" size="10"></td>
+            </tr>
+
+            <tr>
+
+                <td> Harddrive upgrade $ 89.99:</td>
+                <td id="winhardrive"><input name="winhardrive" size="10"></td>
+                <td> Harddrive upgrade $ 89.99:</td>
+                <td id="ihardrive"><input name="ihardrive" size="10"></td>
+            </tr>
+
+            <tr>
+
+                <td> Memory upgrade $ 89.99:</td>
+                <td id="winmemory"><input name="winmemory" size="10"></td>
+                <td> Memory upgrade $ 89.99:</td>
+                <td id="imemory"><input name="imemory" size="10"></td>
+            </tr>
+
+
+            <tr>
+                <td style="float: right;"><input type="button" name="cal" value="Calculate" onclick="calculate1();">
+                    <input type="button" name="clear" value="Clear" onclick="clearinfo1();">
+                </td>
+                <td></td>
+                <td style="float: right;"><input type="button" name="cal" value="Calculate" onclick="calculate2();">
+                    <input type="button" name="clear" value="Clear" onclick="clearinfo2();">
+                </td>
+            </tr>
+
+            <tr>
+
+                <td>Total:</td>
+                <td style="background-color: white; color: black" id="wintotal"></td>
+                <td>Total:</td>
+                <td style="background-color: white; color: black" id="itotal"></td>
+
+            </tr>
+
+
+            <tr>
+
+                <td>Tax:</td>
+                <td style="background-color: white; color: black" id="wintax"></td>
+                <td>Tax:</td>
+                <td style="background-color: white; color: black" id="itax"></td>
+
+            </tr>
+
+
+            <tr>
+                <td>GrandTotal:</td>
+                <td style="background-color: white; color: black" id="wingrandtotal"></td>
+                <td>GrandTotal:</td>
+                <td style="background-color: white; color: black" id="igrandtotal"></td>
+            </tr>
+
+
+
+    </table>
+
+
+
+
+
+    <footer class="footer1">
+        <p></p>
+    </footer>
+
+    <footer class="footer2">
+
+        <ul>
+            <li><a href="Dal.html">D.A.L</a></li>
+           
+            <li><a href="Contactus.html">Contact Us</a></li>
+
+        </ul>
+
+
+
+
+    </footer>
+
+
+
+
+    <script>
+        //windows calculation
+
+        function calculate1() {
+
+
+            const winscreencost = 29.99
+            const winbatterycost = 49.99
+            const winchargingportcost = 39.99
+            const winmotherboardcost = 129.99
+            const winhardrivecost = 89.99
+            const winmemorycost = 89.99
+
+            var micscreen
+            var micbattery
+            var micchargingport
+            var micmotherboard
+            var michardrive
+            var micmemory
+            var mictax
+            var mictotal
+            var micgrandtotal
+
+            micscreen = parseInt(document.theform.winscreen.value);
+            micbattery = parseInt(document.theform.winbattery.value);
+            micchargingport = parseInt(document.theform.winchargingport.value);
+            micmotherboard = parseInt(document.theform.winmotherboard.value);
+            michardrive = parseInt(document.theform.winhardrive.value);
+            micmemory = parseInt(document.theform.winmemory.value);
+
+            total = (winscreencost * micscreen) + (winbatterycost * micbattery) + (micchargingport * winchargingportcost) + (micmotherboard * winmotherboardcost) + (winhardrivecost * michardrive) + (micmemory * winmemorycost);
+            tax = ((winscreencost * micscreen) + (winbatterycost * micbattery) + (micchargingport * winchargingportcost) + (micmotherboard * winmotherboardcost) + (winhardrivecost * michardrive) + (micmemory * winmemorycost)) * 0.0825;
+
+            micgrandtotal = total + tax
+
+            document.getElementById("wintotal").innerHTML = "$" + total.toFixed(2);
+            document.getElementById("wintax").innerHTML = "$" + tax.toFixed(2);
+
+            document.getElementById("wingrandtotal").innerHTML = "$" + micgrandtotal.toFixed(2);
+        }
+
+
+        function clearinfo1() {
+                        document.theform.winscreen.value = " ";
+                        document.theform.winbattery.value = " ";
+                        document.theform.winchargingport.value = " ";
+                        document.theform.winmotherboard.value = " ";
+                        document.theform.winhardrive.value = " ";
+                        document.theform.winmemory.value = " ";
+
+                        document.getElementById("wintotal").innerHTML = " ";
+                        document.getElementById("wintax").innerHTML = " ";
+                        document.getElementById("wingrandtotal").innerHTML = " ";
+                        
+
+                        document.theform.winscreen.focus();
+
+
+                    }
+
+
+    </script>
+   
+   
+   <script>
+       //calculation for apple
+
+        function calculate2() {
+
+
+            const iscreencost = 159.99
+            const ibatterycost = 149.99
+            const ichargingportcost = 139.99
+            const imotherboardcost = 189.99
+            const ihardrivecost = 89.99
+            const imemorycost = 89.99
+
+
+            var iscreen
+            var ibattery
+            var ichargingport
+            var imotherboard
+            var ihardrive
+            var imemory
+            var itotal
+            var itax
+            var igrandtotal
+            
+
+
+            iscreen = parseInt(document.theform.iscreen.value);
+            ibattery = parseInt(document.theform.ibattery.value);
+            ichargingport = parseInt(document.theform.ichargingport.value);
+            imotherboard = parseInt(document.theform.imotherboard.value);
+            ihardrive = parseInt(document.theform.ihardrive.value);
+            imemory = parseInt(document.theform.imemory.value);
+
+        
+            itotal = ((iscreen * iscreencost) + (ibattery * ibatterycost) + (ichargingport * ichargingportcost) + (imotherboard * imotherboardcost) + (ihardrive * ihardrivecost) + (imemory * imemorycost ));
+            itax = itotal * 0.0825;
+            igrandtotal = itotal + itax;
+
+
+            
+
+            document.getElementById("itotal").innerHTML = "$" + itotal.toFixed(2);
+            document.getElementById("itax").innerHTML = "$" + itax.toFixed(2);
+            document.getElementById("igrandtotal").innerHTML = "$" + igrandtotal.toFixed(2);
+
+
+
+
+
+        }
+        function clearinfo2() {
+                        document.theform.iscreen.value = " ";
+                        document.theform.ibattery.value = " ";
+                        document.theform.ichargingport.value = " ";
+                        document.theform.imotherboard.value = " ";
+                        document.theform.ihardrive.value = " ";
+                        document.theform.imemory.value = " ";
+
+                        document.getElementById("itotal").innerHTML = " ";
+                        document.getElementById("itax").innerHTML = " ";
+                        document.getElementById("igrandtotal").innerHTML = " ";
+                        
+
+                        document.theform.iscreen.focus();
+
+
+                    }
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<a href="http://csnet.southtexascollege.edu/localuser/rortiz84/">Go Back to HomePage</a><br>
+<p style="color: white;"> Roy Ortiz</p><br>
+
+</html>

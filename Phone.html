@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone</title>
+    <link rel="stylesheet" href="layout.css" type="text/css">
+
+
+</head>
+
+
+<body>
+
+
+    <table id="logo">
+        <tr>
+            <td> <img src="logo.png" alt="Stc logo" class="logo"></td>
+            <td>
+                <h1 id="top">Dude On Computer</h1>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+
+    <div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home </a> </li>
+                <li><a href="About us.html">About Us </a> </li>
+                <li><a href="Phone.html">Phone Repair </a> </li>
+                <li><a href="Laptop.html">Laptop Repair </a> </li>
+                <li><a href="Tablet.html">Tablet</a> </li>
+                <li><a href="MacSales.html">Mac Sales</a> </li>
+                <li><a href="Printer.html">Printer </a> </li>
+                <li><a href="Network.html">Network </a> </li>
+                <li><a href="Tech Help.html">Tech Help</a> </li>
+                <li><a href="FAQ.html">FAQ</a> </li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="title">
+        <div>
+            <h1>Phone</h1>
+        </div>
+    </div>
+
+
+
+    <table>
+
+        <tr>
+            <td>
+                <h3 style="font-size: 50px;">Welcome to our PHONE repair station. Here you can pick what kind of phone you have and what needs to be
+                    repaired. What is listed is what we are avalible to fix at the moment. </h3>
+            </td>
+        </tr>
+    </table>
+    <table style="border: solid black 2px;">
+        <form name="theform">
+            <tr style="border: solid black 2px;">
+                <td ><strong>Andriod Phones<img src="android.png" alt="pic of andriod"></strong></td>
+                <td>Enter what you need repaired:</td>
+                <td><strong>Apple Phones<img src="apple.png" alt="pic of apple logo"></strong></td>
+                <td>Enter what you need repaired:</td>
+
+
+            </tr>
+            <tr>
+
+                <td>Screen price $59.99</td>
+                <td id="andscreen"><input name="andscreen" size="10"></td>
+                <td>Screen price $159.99</td>
+                <td id="iscreen"><input name="iscreen" size="10"></td>
+
+            </tr>
+            <tr>
+
+                <td>Battery price $49.99:</td>
+                <td id="andbattery"><input name="andbattery" size="10"></td>
+
+                <td>Battery price $149.99:</td>
+                <td id="ibattery"><input name="ibattery" size="10"></td>
+            </tr>
+            <tr>
+
+                <td>Charging port price $39.99:</td>
+                <td id="andchargingport"><input name="andchargingport" size="10"></td>
+                <td>Charging port price $139.99:</td>
+                <td id="ichargingport"><input name="ichargingport" size="10"></td>
+            </tr>
+            <tr>
+
+                <td>MotherBoard price $ 89.99:</td>
+                <td id="andmotherboard"><input name="andmotherboard" size="10"></td>
+                <td>MotherBoard price $ 189.99:</td>
+                <td id="imotherboard"><input name="imotherboard" size="10"></td>
+
+            </tr>
+
+            <tr>
+                <td style="float: right;"><input type="button" name="cal" value="Calculate" onclick="calculate1();">
+                    <input type="button" name="clear" value="Clear" onclick="clearinfo1();"> </td>
+                    <td></td>
+                    <td style="float: right;"><input type="button" name="cal" value="Calculate" onclick="calculate2();">
+                        <input type="button" name="clear" value="Clear" onclick="clearinfo2();">
+                </td>
+            </tr>
+
+            <tr>
+
+                <td>Tax:</td>
+                <td style="background-color: white; color: black" id="andtax"></td>
+                <td>Tax:</td>
+                <td style="background-color: white; color: black" id="itax"></td>
+
+            </tr>
+            <tr>
+                <td>Total:</td>
+                <td style="background-color: white; color: black" id="andtotal"></td>
+                <td>Total:</td>
+            <td style="background-color: white; color: black" id="iOutput"></td>
+        
+    
+            <tr>
+
+                <td>Grand Total:</td>
+                <td style="background-color: white; color: black" id="andgrandtotal"></td>
+                <td>Grand Total:</td>
+                <td style="background-color: white; color: black" id="igrandtotal"></td>
+
+            </tr>
+
+
+        </form>   
+
+
+    </table>
+   
+
+
+
+    <footer class="footer1">
+        <p></p>
+    </footer>
+
+    <footer class="footer2">
+
+        <ul>
+            <li><a href="Dal.html">D.A.L</a></li>
+           
+            <li><a href="Contactus.html">Contact Us</a></li>
+
+        </ul>
+
+
+
+
+    </footer>
+
+
+
+
+    <script>
+
+        function calculate1() {
+
+
+            const aprscreen = 59.99
+            const aprbattery = 49.99
+            const aprchargingport = 39.99
+            const aprmotherboard = 89.99
+
+
+            var ascreen
+            var andbattery
+            var andchargingport
+            var andmotherboard
+            var tax
+            var andgrandtotal
+            var total
+
+
+
+            ascreen = parseInt(document.theform.andscreen.value);
+            abattery = parseInt(document.theform.andbattery.value);
+            achargingport = parseInt(document.theform.andchargingport.value);
+            amotherboard = parseInt(document.theform.andmotherboard.value);
+
+
+            tax = ((ascreen * aprscreen) + (abattery * aprbattery) + (achargingport * aprchargingport) + (amotherboard * aprmotherboard)) * 0.0825;
+
+            total = ((ascreen * aprscreen) + (abattery * aprbattery) + (achargingport * aprchargingport) + (amotherboard * aprmotherboard));
+            andgrandtotal = ((ascreen * aprscreen) + (abattery * aprbattery) + (achargingport * aprchargingport) + (amotherboard * aprmotherboard) + tax);
+
+
+            document.getElementById("andtax").innerHTML = "$" + tax.toFixed(2);
+
+            document.getElementById("andtotal").innerHTML = "$" + total.toFixed(2);
+            document.getElementById("andgrandtotal").innerHTML =  "$" +  andgrandtotal.toFixed(2)
+
+
+
+
+        }
+
+        
+        function clearinfo1() {
+                        document.theform.andscreen.value = " ";
+                        document.theform.andbattery.value = " ";
+                        document.theform.andchargingport.value = " ";
+                        document.theform.andmotherboard.value = " ";
+
+                        document.getElementById("andtax").innerHTML = " ";
+                        document.getElementById("andtotal").innerHTML = " ";
+                        document.getElementById("andgrandtotal").innerHTML = " ";
+                        
+
+                        document.theform.andscreen.focus();
+
+
+                    }
+
+
+
+
+
+
+    </script>
+    <script>
+
+        function calculate2() {
+
+
+            const iprscreen = 159.99
+            const iprbattery = 149.99
+            const iprchargingport = 139.99
+            const iprmotherboard = 189.99
+
+
+            var iscreen
+            var ibattery
+            var ichargingport
+            var imotherboard
+            var itax
+            var igrandtotal
+            var itotal
+
+          
+
+
+
+            iscreen = parseInt(document.theform.iscreen.value);
+            ibattery = parseInt(document.theform.ibattery.value);
+            ichargingport = parseInt(document.theform.ichargingport.value);
+            imotherboard = parseInt(document.theform.imotherboard.value);
+
+            itax = ((iscreen * iprscreen) + (ibattery * iprbattery) + (ichargingport * iprchargingport) + (imotherboard * iprmotherboard)) * 0.0825;
+
+            itotal = (iscreen * iprscreen) + (ibattery * iprbattery) + (ichargingport * iprchargingport) + (imotherboard * iprmotherboard);
+            igrandtotal = ((iscreen * iprscreen) + (ibattery * iprbattery) + (ichargingport * iprchargingport) + (imotherboard * iprmotherboard) + itax);
+
+
+
+            document.getElementById("itax").innerHTML = "$" + itax.toFixed(2);
+
+            document.getElementById("iOutput").innerHTML = "$" + itotal.toFixed(2);
+            document.getElementById("igrandtotal").innerHTML=  "$" + igrandtotal.toFixed(2)
+
+
+
+
+
+
+        }
+
+        function clearinfo2() {
+                        document.theform.iscreen.value = " ";
+                        document.theform.ibattery.value = " ";
+                        document.theform.ichargingport.value = " ";
+                        document.theform.imotherboard.value = " ";
+
+                        document.getElementById("itax").innerHTML = " ";
+                        document.getElementById("iOutput").innerHTML = " ";
+                        document.getElementById("igrandtotal").innerHTML = " ";
+                        
+
+                        document.theform.iscreen.focus();
+
+
+                    }
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<a href="http://csnet.southtexascollege.edu/localuser/rortiz84/">Go Back to HomePage</a><br>
+<p style="color: white;"> Roy Ortiz</p><br>
+
+</html>

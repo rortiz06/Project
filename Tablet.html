@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablet</title>
+    <link rel="stylesheet" href="layout.css" type="text/css">
+
+
+</head>
+
+
+<body>
+
+
+    <table id="logo">
+        <tr>
+            <td> <img src="logo.png" alt="Stc logo" class="logo"></td>
+            <td> <h1 id="top">Dude On Computer</h1></td>
+        </tr>
+    </table>
+
+
+
+
+    <div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home </a> </li>
+                <li><a href="About us.html">About Us </a> </li>
+                <li><a href="Phone.html">Phone Repair </a> </li>
+                <li><a href="Laptop.html">Laptop Repair </a> </li>
+                <li><a href="Tablet.html">Tablet</a> </li>
+                <li><a href="MacSales.html">Mac Sales</a> </li>
+                <li><a href="Printer.html">Printer </a> </li>
+                <li><a href="Network.html">Network </a> </li>
+                <li><a href="Work for us.html">Tech Help</a> </li>
+                <li><a href="FAQ.html">FAQ</a> </li>
+                
+            </ul>
+        </nav>
+    </div>
+
+    <div class="title">
+        <div><h1>Tablet</h1></div>
+    </div>
+
+
+
+   
+    <table>
+        <form name="theform">
+            <tr>
+            <td colspan="6">
+                <h3   style="font-size: 50px;">Welcome to our TABLET repair station. Here you can pick what kind of tablet you have and what needs to be
+                    repaired. What is listed is what we are available to fix at the moment.</h3>
+            </td>
+        </tr>
+            <tr>
+                <td><strong>Andriod Tablet<img src="android.png" alt="pic of andriod"></strong></td>
+                <td>Enter what you need repaired:</td>
+                <td><strong>Apple Tablets<img src="apple.png" alt="pic of apple logo"></strong></td>
+                <td>Enter what you need repaired:</td>
+                <td><strong>Chrome Tablets<img src="chrome.png" alt="pic of chrome"></strong></td>
+                <td>Enter what you need repaired:</td>
+
+
+
+            </tr>
+            <tr>
+
+                <td>Screen price $59.99</td>
+                <td id="andscreen"><input name="andscreen" size="10"></td>
+                <td>Screen price $159.99</td>
+                <td id="iscreen"><input name="iscreen" size="10"></td>
+                <td>Screen price $59.99</td>
+                <td id="iscreen"><input name="chrscreen" size="10"></td>
+
+
+            </tr>
+            <tr>
+
+                <td>Battery price $49.99:</td>
+                <td id="andbattery"><input name="andbattery" size="10"></td>
+
+                <td>Battery price $149.99:</td>
+                <td id="ibattery"><input name="ibattery" size="10"></td>
+                <td>Battery price $49.99:</td>
+                <td id="ibattery"><input name="chrbattery" size="10"></td>
+            </tr>
+            <tr>
+
+                <td>Charging port price $39.99:</td>
+                <td id="andchargingport"><input name="andchargingport" size="10"></td>
+                <td>Charging port price $139.99:</td>
+                <td id="ichargingport"><input name="ichargingport" size="10"></td>
+                <td>Charging port price $39.99:</td>
+                <td id="ichargingport"><input name="chrchargingport" size="10"></td>
+            </tr>
+            <tr>
+
+                <td>MotherBoard price $ 89.99:</td>
+                <td id="andmotherboard"><input name="andmotherboard" size="10"></td>
+                <td>MotherBoard price $ 189.99:</td>
+                <td id="imotherboard"><input name="imotherboard" size="10"></td>
+                <td>MotherBoard price $ 89.99:</td>
+                <td id="imotherboard"><input name="chrmotherboard" size="10"></td>
+
+            </tr>
+
+            <tr>
+                <td style="float: right;"><input type="button" name="cal" value="Calculate" onclick="calculate1();">
+                    <input type="button" name="clear" value="Clear" onclick="clearinfo1();"> </td>
+                    <td></td>
+                    <td style="float: right;"><input type="button" name="cal" value="Calculate" onclick="calculate2();">
+                        <input type="button" name="clear" value="Clear" onclick="clearinfo2();">
+                </td>
+                <td></td>
+                <td style="float: right;"><input type="button" name="cal" value="Calculate" onclick="calculate3();">
+                    <input type="button" name="clear" value="Clear" onclick="clearinfo3();">
+            </td>
+                
+            </tr>
+
+            <tr>
+
+                <td>Tax:</td>
+                <td style="background-color: white; color: black" id="andtax"></td>
+                <td>Tax:</td>
+                <td style="background-color: white; color: black" id="itax"></td>
+                <td>Tax:</td>
+                <td style="background-color: white; color: black" id="chrtax"></td>
+
+            </tr>
+            <tr>
+                <td>Total:</td>
+                <td style="background-color: white; color: black" id="andtotal"></td>
+                <td>Total:</td>
+            <td style="background-color: white; color: black" id="itotal"></td>
+            <td>Total:</td>
+            <td style="background-color: white; color: black" id="chrtotal"></td>
+            
+            
+        
+    
+            <tr>
+
+                <td>Grand Total:</td>
+                <td style="background-color: white; color: black" id="andgrandtotal"></td>
+                <td>Grand Total:</td>
+                <td style="background-color: white; color: black" id="igrandtotal"></td>
+                <td>Grand Total:</td>
+                <td style="background-color: white; color: black" id="chrgrandtotal"></td>
+
+            </tr>
+
+
+        </form>   
+
+
+    </table>
+
+   </table>
+
+
+
+    <footer class="footer1">
+        <p></p>
+    </footer>
+
+    <footer class="footer2">
+
+        <ul>
+            <li><a href="Dal.html">D.A.L</a></li>
+           
+            <li><a href="Contactus.html">Contact Us</a></li>
+
+        </ul>
+
+
+
+
+    </footer>
+
+    <script>
+        //andriod calculation
+
+        function calculate1() {
+
+
+            const andscreencost = 29.99
+            const andbatterycost = 49.99
+            const andchargingportcost = 39.99
+            const andmotherboardcost = 129.99
+            
+
+            var andscreen
+            var andbattery
+            var andchargingport
+            var andmotherboard
+           
+            var andtax
+            var andtotal
+            var andgrandtotal
+
+            andscreen = parseInt(document.theform.andscreen.value);
+            andbattery = parseInt(document.theform.andbattery.value);
+            andchargingport = parseInt(document.theform.andchargingport.value);
+            andmotherboard = parseInt(document.theform.andmotherboard.value);
+            
+
+            andtotal = (andscreencost * andscreen) + (andbatterycost * andbattery) + (andchargingport * andchargingportcost) + (andmotherboard * andmotherboardcost);
+            andtax = ((andscreencost * andscreen) + (andbatterycost * andbattery) + (andchargingport * andchargingportcost) + (andmotherboard * andmotherboardcost)) * 0.0825;
+
+            andgrandtotal = andtotal + andtax
+
+            document.getElementById("andtotal").innerHTML = "$" + andtotal.toFixed(2);
+            document.getElementById("andtax").innerHTML = "$" + andtax.toFixed(2);
+
+            document.getElementById("andgrandtotal").innerHTML = "$" + andgrandtotal.toFixed(2);
+        }
+
+
+        function clearinfo1() {
+                        document.theform.andscreen.value = " ";
+                        document.theform.andbattery.value = " ";
+                        document.theform.andchargingport.value = " ";
+                        document.theform.andmotherboard.value = " ";
+                       
+
+                        document.getElementById("andtotal").innerHTML = " ";
+                        document.getElementById("andtax").innerHTML = " ";
+                        document.getElementById("andgrandtotal").innerHTML = " ";
+                        
+
+                        document.theform.andscreen.focus();
+
+
+                    }
+
+
+    </script>
+
+<script>
+    //apple calculation
+
+    function calculate2() {
+
+
+        const iscreencost = 129.99
+        const ibatterycost = 149.99
+        const ichargingportcost = 139.99
+        const imotherboardcost = 189.99
+        
+
+        var iscreen
+        var ibattery
+        var ichargingport
+        var imotherboard
+       
+        var itax
+        var itotal
+        var igrandtotal
+
+        iscreen = parseInt(document.theform.iscreen.value);
+        ibattery = parseInt(document.theform.ibattery.value);
+        ichargingport = parseInt(document.theform.ichargingport.value);
+        imotherboard = parseInt(document.theform.imotherboard.value);
+        
+
+        itotal = (iscreencost * iscreen) + (ibatterycost * ibattery) + (ichargingport * ichargingportcost) + (imotherboard * imotherboardcost);
+        itax = ((iscreencost * iscreen) + (ibatterycost * ibattery) + (ichargingport * ichargingportcost) + (imotherboard * imotherboardcost)) * 0.0825;
+
+        igrandtotal = itotal + itax
+
+        document.getElementById("itotal").innerHTML = "$" + itotal.toFixed(2);
+        document.getElementById("itax").innerHTML = "$" + itax.toFixed(2);
+
+        document.getElementById("igrandtotal").innerHTML = "$" + igrandtotal.toFixed(2);
+    }
+
+
+    function clearinfo2() {
+                    document.theform.iscreen.value = " ";
+                    document.theform.ibattery.value = " ";
+                    document.theform.ichargingport.value = " ";
+                    document.theform.imotherboard.value = " ";
+                   
+
+                    document.getElementById("itotal").innerHTML = " ";
+                    document.getElementById("itax").innerHTML = " ";
+                    document.getElementById("igrandtotal").innerHTML = " ";
+                    
+
+                    document.theform.iscreen.focus();
+
+
+                }
+
+
+</script>
+
+<script>
+    //andriod calculation
+
+    function calculate3() {
+
+
+        const chrscreencost = 29.99
+        const chrbatterycost = 49.99
+        const chrchargingportcost = 39.99
+        const chrmotherboardcost = 129.99
+        
+
+        var chrscreen
+        var chrbattery
+        var chrchargingport
+        var chrmotherboard
+       
+        var chrtax
+        var chrtotal
+        var chrgrandtotal
+
+        chrscreen = parseInt(document.theform.chrscreen.value);
+        chrbattery = parseInt(document.theform.chrbattery.value);
+        chrchargingport = parseInt(document.theform.chrchargingport.value);
+        chrmotherboard = parseInt(document.theform.chrmotherboard.value);
+        
+
+        chrtotal = (chrscreencost * chrscreen) + (chrbatterycost * chrbattery) + (chrchargingport * chrchargingportcost) + (chrmotherboard * chrmotherboardcost);
+        chrtax = ((chrscreencost * chrscreen) + (chrbatterycost * chrbattery) + (chrchargingport * chrchargingportcost) + (chrmotherboard * chrmotherboardcost)) * 0.0825;
+
+        chrgrandtotal = chrtotal + chrtax
+
+        document.getElementById("chrtotal").innerHTML = "$" + chrtotal.toFixed(2);
+        document.getElementById("chrtax").innerHTML = "$" + chrtax.toFixed(2);
+
+        document.getElementById("chrgrandtotal").innerHTML = "$" + chrgrandtotal.toFixed(2);
+    }
+
+
+    function clearinfo3() {
+                    document.theform.chrscreen.value = " ";
+                    document.theform.chrbattery.value = " ";
+                    document.theform.chrchargingport.value = " ";
+                    document.theform.chrmotherboard.value = " ";
+                   
+
+                    document.getElementById("chrtotal").innerHTML = " ";
+                    document.getElementById("chrtax").innerHTML = " ";
+                    document.getElementById("chrgrandtotal").innerHTML = " ";
+                    
+
+                    document.theform.chrscreen.focus();
+
+
+                }
+
+
+</script>
+
+    
+
+
+
+
+
+
+</body>
+<a href="http://csnet.southtexascollege.edu/localuser/rortiz84/">Go Back to HomePage</a><br>
+<p style="color: white;"> Roy Ortiz</p><br>
+</html>

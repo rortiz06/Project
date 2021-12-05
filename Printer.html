@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Printer</title>
+    <link rel="stylesheet" href="layout.css" type="text/css">
+
+
+</head>
+
+
+<body>
+
+
+    <table id="logo">
+        <tr>
+            <td> <img src="logo.png" alt="Stc logo" class="logo"></td>
+            <td>
+                <h1 id="top">Dude On Computer</h1>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+
+    <div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home </a> </li>
+                <li><a href="About us.html">About Us </a> </li>
+                <li><a href="Phone.html">Phone Repair </a> </li>
+                <li><a href="Laptop.html">Laptop Repair </a> </li>
+                <li><a href="Tablet.html">Tablet</a> </li>
+                <li><a href="MacSales.html">Mac Sales</a> </li>
+                <li><a href="Printer.html">Printer </a> </li>
+                <li><a href="Network.html">Network </a> </li>
+                <li><a href="Tech Help.html">Tech Help</a> </li>
+                <li><a href="FAQ.html">FAQ</a> </li>
+
+            </ul>
+        </nav>
+    </div>
+
+    <div class="title">
+        <div>
+            <h1>Printer</h1>
+        </div>
+    </div>
+
+    <h2>Welcome to the Printer site. Here you can choose a different type of printer service that you can buy - a small
+        printer and the ink or buy a larger printer that you get charged per print outs.</h2>
+
+    <table>
+        <form name="theform">
+            <tr>
+                <td colspan="5"><strong>Enter in the bottom an average of about how much paper you use in a day.</strong></td>
+            </tr>
+        <tr>
+            <td><img src="printer1.jpg" alt=""></td>
+            <td>Black and white copies $ 0.08</td>
+            <td id="black"><input name="black" size="10"></td>
+            <td>Color $ 0.15</td>
+            <td id="color"><input name="color" size="10"></td>
+            
+           
+        </tr>
+        <tr>
+            <td colspan="4" >
+                Total:
+            </td>
+            <td style="background-color: white; color: black" id="total"></td>
+        </tr>
+
+        <tr>
+            <td colspan="4">
+                Taxes:
+            </td>
+            <td  style="background-color: white; color: black" id="tax"></td>
+        </tr>
+
+        <tr>
+            <td colspan="4">
+                Day Total:
+            </td>
+            <td style="background-color: white; color: black" id="daytotal"></td>
+        </tr>
+       
+        <tr>
+           
+            <td colspan="4"><input type="button" name="cal" value="Calculate" onclick="calculate();">
+                <input type="button" name="clear" value="Clear" onclick="clearinfo();">
+            </td>
+        </tr>
+
+        <tr>
+        </form>
+        
+    </table>
+
+
+
+    <footer class="footer1">
+        <p></p>
+    </footer>
+
+    <footer class="footer2">
+
+        <ul>
+            <li><a href="Dal.html">D.A.L</a></li>
+           
+            <li><a href="Contactus.html">Contact Us</a></li>
+
+        </ul>
+
+
+
+
+    </footer>
+
+    <script>
+       
+        function calculate() {
+
+
+            const blackcost = 0.08
+            const colorcost = 0.15
+            
+            var black
+            var color
+            var totalblack
+            var totalcolor
+            
+            var tax
+            var total
+            var daytotal
+
+            var year
+            var month
+            var week
+            var discount
+            
+           
+
+            black = parseInt(document.theform.black.value);
+            color = parseInt(document.theform.color.value);
+
+            totalblack = blackcost * black
+            totalcolor = colorcost * color
+
+            total= parseFloat(totalblack + totalcolor)
+            tax = parseFloat(totalblack + totalcolor) * 0.0825
+            daytotal = parseFloat(total + tax)
+
+           
+           
+
+            document.getElementById("total").innerHTML = "$" + total.toFixed(2);
+            document.getElementById("tax").innerHTML = "$" + tax.toFixed(2);
+            document.getElementById("daytotal").innerHTML = "$" + daytotal.toFixed(2);
+           
+        }
+
+
+        function clearinfo() {
+                        document.theform.black.value = " ";
+                        document.theform.color.value = " ";
+                        
+                        document.getElementById("total").innerHTML = " ";
+                        document.getElementById("tax").innerHTML = " ";
+                        document.getElementById("grandtotal").innerHTML = " ";
+                        
+
+                        document.theform.black.focus();
+
+
+                    }
+
+
+    </script>
+
+
+
+
+
+
+
+
+</body>
+<a href="http://csnet.southtexascollege.edu/localuser/rortiz84/">Go Back to HomePage</a><br>
+<p style="color: white;"> Roy Ortiz</p><br>
+
+</html>
